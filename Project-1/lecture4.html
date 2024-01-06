@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> How does Web works? </title>
+</head>
+<body>
+    <!-- This is a vertical navigation bar-->
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="lecture1.html"> Lecture-1 </a></li>
+                <li> <a href="lecture2.html"> Lecture-2 </a> </li>
+                <li> <a href="lecture3.html"> Lecture-3 </a></li>
+                <li> <a href="lecture4.html"> Lecture-4 </a></li>
+                <li> <a href="lecture5.html"> Lecture-5 </a></li>
+                <li> <a href="lab.html"> Lab </a></li>
+            </ul>
+        </nav>
+    </header>   
+    <hr>
+    <!--Image is added here-->
+    <figure>
+    <img src="images/Network.png" alt="Layer Architecture Model" title="OSI vs TCP model"
+    width="800"> <!--It was a big picture so had to use width -->
+    <figcaption>
+    <a href="https://blog.boson.com/bid/102913/the-seven-layers-of-networking-part-iii"><strong>Source </strong></a>
+    </figcaption>
+    </figure>
+
+    <article>
+        <h1>Layered Architecture</h1>
+        <nav>
+            <ul>
+                <li>A protocol is a set of rules that both side of the networks use in order to communicate. </li>
+                <li>These protocols are implemented in every OS which makes the web development faster.</li>
+            </ul>
+        </nav>
+        <hr>
+        <section>
+            <h3><u>Link Layer</u></h3>
+            <nav>
+                <ul>
+                    <li>It is the lowest layer, responsible for both the physical transmission
+                        of data across media and establishing logical links.
+                    </li>
+                    <li>It handles issues like packet creation, reception, error detection, collisions, etc.</li>
+                    <li>Media access control <strong>(MAC)</strong> referred to as a hardware address, is a unique, 
+                        12-char alphanumeric attribute that is used to identify individual electronic devices on
+                        a network.
+                    </li>
+                </ul>
+            </nav>            
+        </section>
+        <section>
+            <h3><u>Internet Layer</u></h3>
+            <nav>
+                <ul>
+                    <li>It routespackets between communication partners across networks. It is also called IP layer.</li>
+                    <li>It sends out message to the destination, but does not guarentee that message will reach without 
+                        loss of information.
+                    </li>
+                    <li>The internet uses Internet Protocols <strong>(IP)</strong> addresses, which are numeric codes
+                        that uniquely identifydestinations on the internet.
+                    </li>
+                    <li>Every device using internet has an IP address.
+                    <ul>
+                        <li>In <strong>(IPv4)</strong>, four 8-bit integers separated by . encode the address.</li>
+                        <li>In <strong>(IPv6)</strong>, eight 16-bit integers and has over billion times the number in IPv4. </li>
+                        <li>Port Address Translation <strong>(PAT)</strong>, allows multiple, unrelated networks to make use of the 
+                            same IP address.</li>
+                    </ul>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section>
+            <h3><u>Transport Layer</u></h3>
+            <nav>
+                <ul> 
+                    <li>It ensures transmissions arrive in order and without any error.</li>
+                    <li>The data is first broken into small packets accoridng to Transmission Control Protocol <strong>(TCP)</strong>.
+                    <ul>
+                        <li>Each data packet includes a header with a sequence number.</li>
+                        <li>The receivers will put the header number in sequence to retrieve the original message.</li>
+                        <li>Each packet sends acknowledgement once the message arrives back successfully.</li>
+                        <li>If no acknowledgement is received, then the packet will be retransmitted.</li>
+                    </ul>
+                    </li>
+                    <li>User Datagram Protocol <strong>(UDP)</strong> is used in lieu of TCP, when little lose of data does not
+                        really affect the message. An example could be live broadcast of a football game. 
+                    </li>
+                </ul>  
+            </nav>
+        </section>
+        <section>
+            <h3><u>Application Layer</u></h3>
+            <nav>
+                <ul>
+                    <li>It implements process-to-process communication.</li>
+                    <li>It includes the following protocols:
+                    <ul>
+                        <li><strong>HTTP: </strong>Hypertext Transfer Protocol is used for web communication.</li>
+                        <li><strong>SSH: </strong>Secure Shell Protocol allows remote command-line connections to servers.</li>
+                        <li><strong>FTP: </strong>File Transfer Protocol is used for transferring files between computers.</li>
+                        <li><strong>POP: </strong>Email-related protocols for transferring and storing email.</li>
+                        <li><strong>DNS: </strong>The Domain Name System protocol used for resolving domain names to IP addresses.</li>
+                    </ul>
+                    </li>
+                </ul>
+            </nav>
+            <hr>
+        </section>
+    </article>
+
+    <figure>
+        <img src="images/DNS.png" alt="DNS System" title="DNS System"
+        width="500"> <!--It was a big picture so had to use width -->
+        <figcaption>
+        <a href="https://www.computerhope.com/jargon/d/dns.htm"><strong>Source </strong></a>
+        </figcaption>
+        </figure>
+
+    <article>
+        <h1>Domain Name System</h1>
+        <section>
+            <h3><u>DNS Overview</u></h3>
+            <nav>
+                <ul>
+                    <li>A computer containing a database of public IP addresses associated with 
+                        the name of the website. This is called Domain Name System.
+                    </li>
+                    <li>By separating the domain name of a server from its IP address, a site can move 
+                        to a different host without changing its name.</li>
+                    <li>All domain names have at least a top-level domain(TLD) name and a 
+                        second-level domain (SLD) name.
+                    </li>
+                    <li>The rightmost portion of the domain name is the top-level domain.</li>
+                    <li><strong>Generic top-level domain: </strong>
+                    <ul>
+                        <li>Unresticted: TLDs include .com, .net, .org, and .info.</li>
+                        <li>Sponsored: TLDs include .gov, .mil, .edu, etc.</li>
+                        <li>New: contains .art, .jobs, .tax, and many more.</li>
+                    </ul>
+                    </li>
+                    <li><strong>Country code top-level domain: </strong>
+                    <ul>
+                        <li>It comes under the control of the countires which they represent, 
+                            so they are administered differently.
+                        </li>
+                        <li>In the United Kingdom, businesses have co.uk, while anyone doing business in Canada
+                            can use .ca domain.
+                        </li>
+                        <li>Some countries have allowed unrestricted use of domain to generate revenue.</li>
+                        <li>International top-level domain name allows domains to use non-ascii characters.</li>
+                    </ul>
+                    </li>
+                    <li><strong>Name registration process</strong>
+                    <ul>
+                        <li>Domain name registrars is a special organization which manages the registration process.</li>
+                        <li>Registrant searches on web portal for the domain.</li>
+                        <li>Registrant queries the relevant TLD Registry Operator to see if the requested domain is available.</li>
+                        <li>If domain in available, then pay for the domaina dn provide all the necessary information.</li>
+                        <li>Registry operator adds all the WHOIS information for the new domain to its authoritative list.</li>
+                        <li>Registry operator will push DNS 5 information for new domain out to its name servers for the TLD.</li>
+                    </ul>
+                    </li>
+                </ul>
+            </nav>
+            <hr>
+        </section>
+    </article>
+
+    <figure>
+        <img src="images/URL.png" alt="URL" title="URL"
+        width="700"> <!--It was a big picture so had to use width -->
+        <figcaption>
+        <a href="https://www.businessinsider.com/guides/tech/what-is-a-url"><strong>Source </strong></a>
+        </figcaption>
+    </figure>
+    
+    <article>
+        <h1>Uniform Resource Locator</h1>
+        <section>
+            <h3><u>Information about URL</u></h3>
+            <nav>
+                <ul>
+                    <li>Uniform resource locators (URLs) allow clients to request particular resources from the server.</li>
+                    <li>Required components
+                    <ul>
+                        <li>The protocl used to connect, usually http/ https.</li>
+                        <li>The domain to connect to i.e., www.domain_name.com.</li>
+                    </ul>
+                    </li>
+                    <li>Optional componets
+                    <ul>
+                        <li><strong>Port: </strong>It is a software connection point used by the underlying 
+                            TCP/IP protocol and the connecting computer. Port 80 is the default port for 
+                            web-related HTTP requests. It is added after the domain name with ':'.
+                        </li>
+                        <li><strong>Path: </strong>It identifies a file or directory to access on that server.
+                            When requesting a folder, if the path is not mentioned, the web server will decide which
+                            file to send you.
+                        </li>
+                        <li><strong>Query String: </strong>It is a critical way of passing information, such as user form 
+                            input, from the client to the server. They are encoded as key value pairs delimited by '&' 
+                            and preceded by '?' symbol.
+                        </li>
+                        <li><strong>Fragment: </strong>This is used as a way of requesting a portion of a page. 
+                            Browsers will see the fragment in the URL (denoted by #), seek out the fragment 
+                            tag anchor in the HTML, and scroll the website down to it.
+                        </li>
+                    </ul>
+                    </li>
+                </ul>
+            </nav>
+            <hr>
+        </section>
+    </article>
+
+    <!-- Adding copyright in footer tag-->
+    <footer>
+        <p>Copyright &copy; <em>2023 Personal Summary Project</em></p>
+    </footer>
+</body>
+</html>

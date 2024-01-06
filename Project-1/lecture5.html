@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> HTML Introduction </title>
+</head>
+<body>
+    <!-- This is a vertical navigation bar-->
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="lecture1.html"> Lecture-1 </a></li>
+                <li> <a href="lecture2.html"> Lecture-2 </a> </li>
+                <li> <a href="lecture3.html"> Lecture-3 </a></li>
+                <li> <a href="lecture4.html"> Lecture-4 </a></li>
+                <li> <a href="lecture5.html"> Lecture-5 </a></li>
+                <li> <a href="lab.html"> Lab </a></li>
+            </ul>
+        </nav>
+    </header>   
+    <hr>
+        <!--Image is added here-->
+        <figure>
+            <img src="images/HTTP.png" alt="HTTP request" title="Post and Get"
+            width="800"> <!--It was a big picture so had to use width -->
+            <figcaption>
+            <a href="https://velog.io/@yonghk423/GET-POST"><strong>Source </strong></a>
+            </figcaption>
+        </figure>
+    <article>
+        <h1>HTTP</h1>
+        <section>
+            <h3><u>All About HTTP</u></h3>
+            <nav>
+                <ul>
+                    <li>HTTP established a TCP connection on port 80.</li>
+                    <li>The server waits for the request, and then responds with a header, response code, and an optional message.</li>
+                    <li>HTTP headers
+                        <ul>
+                            <li>Headers are sent in the request from the client and received in the response from the server. </li>
+                            <li>Request headers include data about the client machine i.e., host, cache settings and more.</li>
+                            <li>Response headers have information about the server answering the request and the data being sent 
+                                which includes serverm content type, encoding, and last modified.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>HTTP request methods
+                        <ul>
+                            <li>GET request is made whenever an URL is searched on a browser. User is trying to find resource 
+                                located at a specific URL to be retrieved. Data can be transmitted through a GET request, 
+                                with a query string.
+                            </li>
+                            <li>POST request is normally used to transmit data to the server using an HTML form. 
+                                An example would be a submit button.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Response codes
+                        <ul>
+                            <li>These are integer values returned by the server as a part of the response header.</li>
+                            <li>2## codes are for successful reponses. E.g. 200</li>
+                            <li>3## codes are for redirection-related responses. E.g. 301 and 304</li>
+                            <li>4## codes are for client errors. E.g. 401, 404(most common), and 414</li>
+                            <li>5## codes are for server errors. E.g. 505</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <hr>
+        </section>
+    </article>
+    <article>
+        <h1>Web Browsers</h1>
+        <section>
+            <h3><u>How does it works?</u></h3>
+            <nav>
+                <ul>
+                    <li>Browsers are the place where a web page is displayed.</li>
+                    <li>Web page requests the inital HTML page, then parses the returned HTML to find all the resources
+                        referenced from within the program. Once all files have been retrieved, the page will be fully 
+                        loaded.
+                    </li>
+                    <li>A single web page might require many HTTP requests and responses.</li>
+                    <li>The algorithm within browsers to download, parse, fetch assests, layout, and create the final 
+                        interactive page for the user are collectively called rendering of the page.
+                    </li>
+                    <li>Once a webpage has been downloaded from the server, it’s possible that the user, a short time 
+                        later, wants to see the same web page and refreshes the browser or rerequests the URL. This is 
+                        known as browser caching.
+                    </li>
+                    <li>Browser caching has a significant impact in reducing network traffic.
+                    </li>
+                </ul>
+            </nav>
+            <hr>
+        </section>
+    </article>
+    <article>
+        <h1>Web Servers</h1>
+        <section>
+            <h3><u>Definition</u></h3>
+            <nav>
+                <ul>
+                    <li>It is a computer that responds to HTTP requests.</li>
+                    <li>The application stack will include an operating system, web server software,
+                        a database, and a scripting language to process dynamic requests.
+                    </li>
+                    <li>Some of the stacks are LAMP means Linux OS, Apache web server,
+                        MySQL database, and PHP scripting language. Similarly, there is OSX MAMP, WAMP,
+                        MERN, WISA (microsoft stack) and more.
+                    </li>
+                </ul>
+            </nav>
+            <hr>
+        </section>
+    </article>
+
+    <figure>
+        <img src="images/History.png" alt="HTML history" title="HTML timeline"
+        width="800"> <!--It was a big picture so had to use width -->
+        <figcaption>
+        <a href="https://webblog559388436.wordpress.com/2018/04/27/history-of-html/"><strong>Source </strong></a>
+        </figcaption>
+    </figure>
+
+    <article>
+        <h1>HTML</h1>
+        <section>
+            <h3><u>History of HTML</u></h3>
+            <nav>
+                <ul>
+                    <li>HTML is a markup language. A markup lnaguage is simply a way of annotating a 
+                        document in such a way as to make the annotations distinct from the text 
+                        being annotated.
+                    </li>
+                    <li>The initial HTML specification cam in 1991 by Tim Berners-Lee and Robert Cailliau.</li>
+                    <li>“browser wars” in the mid 1990s between Netscape Navigator and Microsoft Internet 
+                        Explorer motivated many new tags and features such as CSS and JavaScript, but the 
+                        development of new features happened quickly, and interoperability between browsers 
+                        became a major issue.
+                    </li>
+                    <li>W3C developed a new specification in late 1990s called XHTML 1.0 that used stricter <strong>XML </strong>(
+                        Extensible Markup Language). Later, XHTML 1.0 Transitional was also created which allowed web authors to 
+                        use presentational elements.
+                    </li>
+                    <li>The goal of XHTML with its strict rules was to make page rendering more predictable 
+                        by forcing web authors to create web pages without syntax errors.
+                    </li>
+                    <li>There are three main aimsa to HTML5
+                        <ol>
+                            <li>Specify unambiguously how browsers should deal with invalid markup.</li>
+                            <li>Provide an open, nonproprietary programming framework (via JavaScript) for creating rich web applications.</li>
+                            <li>Be backward compatible with the existing web.</li>
+                        </ol>
+                    </li>
+                </ul>
+            </nav>
+            <hr>
+        </section>
+    </article>
+    <!-- Adding copyright in footer tag-->
+    <footer>
+        <p>Copyright &copy; <em>2023 Personal Summary Project</em></p>
+    </footer>
+</body>
+</html>
