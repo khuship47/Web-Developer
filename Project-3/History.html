@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>AboutUS-Page</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <img src="images/logo.png" alt="Logo" title="company-logo" class="logo">
+                <h1>Recycle Your Ugly Gifts</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Product.html">Products</a></li>
+                    <li><a href="Discounts.html">Discounts</a></li>
+                    <li><a href="#" class="current">History</a></li>
+                </ul>
+            </nav>
+        </header>
+       <article>
+            <section>
+                <div class="about-us-box">
+                    <div class="about-us-text">
+                        <h3>History of the Brand</h3>
+                        <p class="justify"> 
+                            In 2010, founders Khushi Patel embarked on a mission to redefine sustainable 
+                            living by breathing life into discarded items. Witnessing the environmental 
+                            impact of waste and inspired by the beauty that could emerge from unwanted gifts, 
+                            they established Recycle Your Ugly Gifts. At the heart of their vision was the 
+                            idea of transforming waste into valuable treasures. Recycle Your Ugly Gifts 
+                            pioneered the concept of creating stylish, functional products using discarded 
+                            materials. From old textiles to forgotten trinkets, every item had the potential 
+                            to be reborn through thoughtful upcycling.As the brand gained momentum, Recycle 
+                            Your Ugly Gifts became synonymous with eco-chic living. Their curated collections 
+                            featured everything from fashionable accessories crafted from reclaimed fabrics to 
+                            home decor made from repurposed materials, setting new standards for sustainable 
+                            style. 
+                        </p>
+                    </div>
+                    <div class="about-us-image">
+                        <img src="images/historyRecycle.png" alt="Recycle-Img" title="recycle"width="200" height="auto">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="about-us-box-2">
+                    <div class="about-us-image-2">
+                        <img src="images/Founder.png" alt="Recycle-Img" title="recycle" width="200" height="auto">
+                    </div>
+                    <div class="about-us-text-2">
+                        <h3>Founders</h3>
+                        <p class="justify">
+                            Khushi Patel, the visionary founder of Recycle Your Ugly Gifts,, is a counterpart 
+                            in the areas of conscious consumerism and ecological living. Gifted with an interest 
+                            in environmental conservation and an insightful perception of the potential hidden 
+                            in abandoned goods, Khushi set out to transform our understanding of garbage in 2010.
+                            Driven by a desire to address the environmental impact of discarded items, Khushi 
+                            sought to transform this overlooked "ugliness" into something beautiful and purposeful.
+                            With an unwavering commitment to the principles of repurposing and upcycling, she 
+                            co-founded Recycle Your Ugly Gifts as a testament to the transformative power of 
+                            conscious design.
+                            <br>
+                            Today, Khushi Patel stands as a driving force behind Recycle Your Ugly Gifts, shaping 
+                            the brand's identity as a beacon of style, sustainability, and the art of turning "ugly" 
+                            into something extraordinary. Her vision continues to inspire individuals to make mindful 
+                            choices, fostering a brighter and greener future for generations to come.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="about-us-box">
+                    <div class="about-us-text">
+                        <h3>Customer Feedback</h3>
+                        <p class="justify">
+                            I recently made my first purchase from Recycle Your Ugly Gifts, and I am beyond 
+                            thrilled with my experience. As someone passionate about sustainability, finding a 
+                            brand that aligns with my values was a dream come true.
+                            <br>
+                            I selected a beautifully crafted bag made from upcycled materials, and it exceeded 
+                            my expectations. The attention to detail and the quality of craftsmanship truly 
+                            showcase the brand's dedication to creating unique, eco-friendly products. I love 
+                            how each item tells a story of renewal and sustainability.
+                            <br>
+                            I'm already eyeing my next purchase and can't wait to continue supporting this 
+                            fantastic brand. Thank you, Recycle Your Ugly Gifts, for making sustainability 
+                            stylish and accessible!
+                            <br><br>
+                            Warm regards,
+                            <br>
+                            Cassey
+                        </p>
+                    </div>
+                    <div class="about-us-image">
+                        <img src="images/Customer.png" alt="Recycle-Img" title="recycle"width="200" height="auto">
+                    </div>
+                </div>
+            </section>
+        </article>
+        <p id="wordCount"></p>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Calculate and display total word count on the screen
+                var totalWordCount = countWords(document.body.innerText);
+                document.getElementById('wordCount').textContent = 'Total Word count: ' + totalWordCount;
+            });
+    
+            function countWords(text) {
+                var words = text.trim().split(/\s+/);
+                return words.length;
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                // Get the elements you want to scroll
+                var scrollTextElements = document.querySelectorAll('.about-us-text p, .about-us-text-2 p');
+
+                // Add click event listeners to toggle scrolling for each element
+                scrollTextElements.forEach(function (scrollText) {
+                    scrollText.addEventListener('click', function () {
+                        toggleScrolling(scrollText);
+                    });
+                });
+
+                function toggleScrolling(scrollText) {
+                    if (!scrollText.classList.contains('scrolling')) {
+                        startScrolling(scrollText);
+                    } else {
+                        stopScrolling(scrollText);
+                    }
+                }
+
+                function startScrolling(scrollText) {
+                    scrollText.classList.add('scrolling');
+                    // Set an interval to scroll the text vertically
+                    scrollText.interval = setInterval(function () {
+                        scrollText.scrollTop += 1;
+                    }, 50); // Adjust the scroll speed by changing the interval duration
+                }
+
+                function stopScrolling(scrollText) {
+                    scrollText.classList.remove('scrolling');
+                    clearInterval(scrollText.interval);
+                }
+            });
+
+        </script>
+    </body>
+</html>

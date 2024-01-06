@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Login-Page</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="header">
+            <img src="images/logo.png" alt="Logo" title="company-logo" class="l-logo">
+            <h1 class="head">Recycle Your Ugly Gifts</h1>
+        </div>
+
+        <div class="box">
+            <p class="log" align="center">Log In</p>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input class="username" type="text" id="username" name="username" title="Suggested password: kpatel93"required>
+                <br>
+                <label for="password">Password:</label>
+                <input class="password" type="password" id="password" name="password" title="Suggested password: Webprog2023"required>
+                <br>
+                <input type="checkbox" id="showPassword" onclick="togglePassword()"> Show Password
+                <br>
+
+                <button class="submit" type="button" onclick="login()">Log In</button>
+                <p id="loginStatus"></p>
+                <p id="wordCount"></p>
+
+                <div style="position: absolute; bottom: 10px; left: 10px;">
+                    <video width="320" height="240" autoplay loop>
+                        <source src="images/Ad-1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            function togglePassword() {
+                var passwordInput = document.getElementById('password');
+                var showPasswordCheckbox = document.getElementById('showPassword');
+    
+                if (showPasswordCheckbox.checked) {
+                    passwordInput.type = 'text';
+                } else {
+                    passwordInput.type = 'password';
+                }
+            }
+    
+            function login() {
+                var username = document.getElementById('username').value.trim();
+                var password = document.getElementById('password').value.trim();
+                var loginStatus = document.getElementById('loginStatus');
+    
+                if (username === 'kpatel93' && password === 'Webprog2023') {
+                    loginStatus.textContent = 'Login successful! Redirecting to the home page...';
+                    setTimeout(function() {
+                        window.location.href = 'Home.html';
+                    }, 1000);
+                } else {
+                    loginStatus.textContent = 'Invalid username or password. Please try again.';
+                }
+            }
+    
+            document.addEventListener('DOMContentLoaded', function () {
+                var totalWordCount = countWords(document.body.innerText);
+                document.getElementById('wordCount').textContent = 'Total Word count: ' + totalWordCount;
+            });
+    
+            function countWords(text) {
+                var words = text.trim().split(/\s+/);
+                return words.length;
+            }
+        </script>
+    </body>
+</html>

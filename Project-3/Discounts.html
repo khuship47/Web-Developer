@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Discount-Page</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <img src="images/logo.png" alt="Logo" title="company-logo" class="logo">
+                <h1>Recycle Your Ugly Gifts</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Product.html">Products</a></li>
+                    <li><a href="#" class="current">Discounts</a></li>
+                    <li><a href="History.html">History</a></li>
+                </ul>
+            </nav>
+        </header> 
+        
+        <p><strong>Rule: </strong>Flip anyone of the tiles and you will get the written discount on your purchased items.</p>
+        <div class="discount-grid">
+            <div class="tile" onclick="flipTile(this)">
+                <div class="front">Click to reveal</div>
+                <div class="back">10% Off</div>
+            </div>
+            <div class="tile" onclick="flipTile(this)">
+                <div class="front">Click to reveal</div>
+                <div class="back">5% Off</div>
+            </div>
+            <div class="tile" onclick="flipTile(this)">
+                <div class="front">Click to reveal</div>
+                <div class="back">Better Luck Next Time</div>
+            </div>
+            <div class="tile" onclick="flipTile(this)">
+                <div class="front">Click to reveal</div>
+                <div class="back">Better Luck Next Time</div>
+            </div>
+            <div class="tile" onclick="flipTile(this)">
+                <div class="front">Click to reveal</div>
+                <div class="back">2% Off</div>
+            </div>
+            <div class="tile" onclick="flipTile(this)">
+                <div class="front">Click to reveal</div>
+                <div class="back">5% Off</div>
+            </div>
+            <div class="tile" onclick="flipTile(this)">
+                <div class="front">Click to reveal</div>
+                <div class="back">10% Off</div>
+            </div>
+            <div class="tile" onclick="flipTile(this)">
+                <div class="front">Click to reveal</div>
+                <div class="back">Better Luck Next Time</div>
+            </div>
+                        <div class="tile" onclick="flipTile(this)">
+                <div class="front">Click to reveal</div>
+                <div class="back">5% Off</div>
+            </div>
+            <div id="message-container"></div>
+            
+        </div>  
+        <p id="wordCount"></p>
+        <div class="video-container">
+            <div style="position: absolute; bottom: 10px; left: 10px;" class="video-animation">
+                <video width="320" height="240" autoplay loop>
+                    <source src="images/Ad-2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var tiles = document.querySelectorAll('.tile');
+                var flippedTile = null;
+
+                tiles.forEach(function (tile) {
+                    tile.addEventListener('click', function () {
+                        if(flippedTile && flippedTile !== this){
+                            showMessage("You can only get discount once!");
+                            return;
+                        }
+                        this.classList.toggle('flipped');
+                        flippedTile = this;
+
+                        var message = this.querySelector('.back').textContent;
+                        if(message !== "Better Luck Next Time")
+                            showMessage("You got " + message);
+                        else{
+                            showMessage("Sorry, " + message);
+                        }
+                    });
+                });
+                function showMessage(message) {
+                    var messageContainer = document.getElementById('message-container');
+                    messageContainer.textContent = message;
+                    messageContainer.style.display = 'block';
+                    setTimeout(function () {
+                        messageContainer.style.display = 'none';
+                    }, 2000);
+                }
+            });
+            document.addEventListener('DOMContentLoaded', function () {
+                // Calculate and display total word count on the screen
+                var totalWordCount = countWords(document.body.innerText);
+                document.getElementById('wordCount').textContent = 'Total Word count: ' + totalWordCount;
+            });
+            function countWords(text) {
+                var words = text.trim().split(/\s+/);
+                return words.length;
+            }
+        </script>
+    </body>
+</html>

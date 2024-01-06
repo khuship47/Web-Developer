@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Product-Page</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <img src="images/logo.png" alt="Logo" title="company-logo" class="logo">
+                <h1>Recycle Your Ugly Gifts</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="#" class="current">Products</a></li>
+                    <li><a href="Discounts.html">Discounts</a></li>
+                    <li><a href="History.html">History</a></li>
+                </ul>
+            </nav>
+        </header>
+        <form id="searchForm">
+            <div class="search-container">
+                <label for="search">Search:</label>
+                <input class="search" type="text" id="search" name="search" placeholder="Enter keyword">
+                
+            </div>
+        </form>
+    
+        <table>
+            <tr>
+                <td>
+                    <img src="images/Backpack.png" alt="Image 1" width="200" height="300">
+                    <div class="item-details">
+                        <div class="item">Backpack</div>
+                        <p class="price"> Price: $20.99</p>
+                        <div class="quantity">
+                            <div>Total Items: 
+                                <select class="item-dropdown">
+                                    <!-- Populate dropdown with options 0 to 10 -->
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="submit" onclick="navigateToDiscounts()">Buy</button>
+                    </div>
+                </td>
+                <td>
+                    <img src="images/Dress.png" alt="Image 1" width="200" height="300">
+                    <div class="item-details">
+                        <div class="item">Dress from Trash</div>
+                        <p class="price"> Price: $35</p>
+                        <div class="quantity">
+                            <div>Total Items: 
+                                <select class="item-dropdown">
+                                    <!-- Populate dropdown with options 0 to 10 -->
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="submit" onclick="navigateToDiscounts()">Buy</button>
+                    </div>
+                </td>
+                <td>
+                    <img src="images/Table.png" alt="Image 1" width="200" height="300">
+                    <div class="item-details">
+                        <div class="item">Modern Table</div>
+                        <p class="price"> Price: $15.99</p>
+                        <div class="quantity">
+                            <div>Total Items: 
+                                <select class="item-dropdown">
+                                    <!-- Populate dropdown with options 0 to 10 -->
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="submit" onclick="navigateToDiscounts()">Buy</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/Pants.png" alt="Image 1" width="200" height="300">
+                    <div class="item-details">
+                        <div class="item">Patch-work Pants</div>
+                        <p class="price"> Price: $12.99</p>
+                        <div class="quantity">
+                            <div>Total Items: 
+                                <select class="item-dropdown">
+                                    <!-- Populate dropdown with options 0 to 10 -->
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="submit" onclick="navigateToDiscounts()">Buy</button>
+                    </div>
+                </td>
+                <td>
+                    <img src="images/Chair.png" alt="Image 1" width="200" height="300">
+                    <div class="item-details">
+                        <div class="item">Bottle-Capped Chair</div>
+                        <p class="price"> Price: $15</p>
+                        <div class="quantity">
+                            <div>Total Items: 
+                                <select class="item-dropdown">
+                                    <!-- Populate dropdown with options 0 to 10 -->
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="submit" onclick="navigateToDiscounts()">Buy</button>
+                    </div>
+                </td>
+                <td>
+                    <img src="images/Totebag.png" alt="Image 1" width="200" height="300">
+                    <div class="item-details">
+                        <div class="item">Tote-Bag</div>
+                        <p class="price"> Price: $10.99</p>
+                        <div class="quantity">
+                            <div>Total Items: 
+                                <select class="item-dropdown">
+                                    <!-- Populate dropdown with options 0 to 10 -->
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="submit" onclick="navigateToDiscounts()">Buy</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/Holder.png" alt="Image 1" width="200" height="300">
+                    <div class="item-details">
+                        <div class="item">Pencil Holder</div>
+                        <p class="price"> Price: $5.99</p>
+                        <div class="quantity">
+                            <div>Total Items: 
+                                <select class="item-dropdown">
+                                    <!-- Populate dropdown with options 0 to 10 -->
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="submit" onclick="navigateToDiscounts()">Buy</button>
+                    </div>
+                </td>
+                <td>
+                    <img src="images/Sandal.png" alt="Image 1" width="200" height="300">
+                    <div class="item-details">
+                        <div class="item">Cardboard Sandals</div>
+                        <p class="price"> Price: $9.99</p>
+                        <div class="quantity">
+                            <div>Total Items: 
+                                <select class="item-dropdown">
+                                    <!-- Populate dropdown with options 0 to 10 -->
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="submit" onclick="navigateToDiscounts()">Buy</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="ad">
+            <video width="420" height="340" autoplay loop muted playsinline>
+                <source src="images/Ad-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p id="wordCount"></p>
+    
+        <script>
+            function navigateToDiscounts() {
+                window.location.href = "Discounts.html";
+            }
+        
+            const searchInput = document.getElementById('search');
+            const productTable = document.querySelector('table');
+        
+            searchInput.addEventListener('input', function () {
+                const searchTerm = searchInput.value.toLowerCase();
+                
+                // Check if the search term is empty
+                if (!searchTerm.trim()) {
+                    // Clear any existing highlights
+                    clearHighlights();
+                    return;
+                }
+        
+                const rows = productTable.querySelectorAll('tr');
+        
+                rows.forEach((row) => {
+                    const cells = row.getElementsByTagName('td');
+        
+                    for (let i = 0; i < cells.length; i++) {
+                        const cell = cells[i];
+                        const item = cell.querySelector('.item');
+                        
+                        // Check if the item contains the search term
+                        const itemText = item.textContent.toLowerCase();
+                        const shouldHighlight = itemText.includes(searchTerm);
+        
+                        if (shouldHighlight) {
+                            item.classList.add('highlight');
+                        } else {
+                            item.classList.remove('highlight');
+                        }
+                    }
+                });
+            });
+            document.addEventListener('DOMContentLoaded', function () {
+                    var totalWordCount = countWords(document.body.innerText);
+                    document.getElementById('wordCount').textContent = 'Total Word count: ' + totalWordCount;
+                });
+        
+                function countWords(text) {
+                    var words = text.trim().split(/\s+/);
+                    return words.length;
+                }
+        
+            // Function to clear highlights
+            function clearHighlights() {
+                const highlightedItems = document.querySelectorAll('.item.highlight');
+                highlightedItems.forEach(item => {
+                    item.classList.remove('highlight');
+                });
+            }
+        </script>
+    </body>
+</html>

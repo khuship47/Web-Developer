@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <link href="h.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Sign in</title>
+</head>
+  
+<body>
+    <header class="imgHeader">
+        <a href="/"><img class="logo" src="/resources/images/logo1.png"></a>   
+    </header>
+    <div class="center-box">
+        <p class="sign" align="center">Sign in</p>
+        <div class="error-message"></div>
+        <form class="form1">
+            <input id='username' class="un" type="text" align="center" placeholder="Username">
+            <input id='password' class="pass" type="password" align="center" placeholder="Password">
+            <a id='submit' class="submit" align="center">Sign in</a>
+            <p class="fine-txt">
+                New to CS Review? <a href="/register">Create an account</a><br>
+                <a href="forgot_password">Forgot password</a>
+            </p>
+        </form>
+    </div>  
+</body>
+
+<script>
+    const box_height = $('.center-box').height();
+
+    const submitData = e => {
+        e.preventDefault();
+        const username = $('#username').val();
+        const password = $('#password').val();
+        $.post('/login', { username: username, password: password })
+        .done(data => {
+            if (data.success) {
+                window.location.href = '/';
+            }
+        }).fail(data => {
+            const err_box = $('.error-message');
+            err_box.html('<p>Invalid username or password!</p>');
+            err_box.css('display', 'flex');
+            const form_box = $('.center-box');
+            const height = box_height + err_box.height();
+            form_box.css('height', `${height}px`);
+        })
+    }
+
+    $('#submit').click(submitData);
+</script>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Home-Page</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <img src="images/logo.png" alt="Logo" title="company-logo" class="logo">
+                <h1>Recycle Your Ugly Gifts</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="current">Home</a></li>
+                    <li><a href="Product.html">Products</a></li>
+                    <li><a href="Discounts.html">Discounts</a></li>
+                    <li><a href="History.html">History</a></li>
+                </ul>
+            </nav>
+        </header>
+       <article>
+            <section>
+                <div class="welcome-box">
+                    <div class="welcome-text">
+                        <h3>Welcome to the R-Y-U-G</h3>
+                        <p class="justify"> Dive into a world of sustainable elegance with Recycle Your Ugly Gifts. 
+                            Our brand is more than a name; it's a philosophy built on the principles 
+                            of Revamp, Rejoice, and Reuse. Our distinctive logo encapsulates our 
+                            commitment to these core values, representing a journey from discarded 
+                            to delightful.
+                        <br><br>
+                            Explore our carefully curated collections, where each item tells a unique 
+                            story of transformation. From fashion-forward accessories to chic home decor, 
+                            every piece is a testament to our dedication to repurposing and minimizing 
+                            waste. We believe in the power of conscious consumerism, where style meets 
+                            sustainability. At Recycle Your Ugly Gifts, we don't just sell products; we 
+                            inspire a lifestyle—one that embraces the art of recycling for a brighter, 
+                            greener future.
+                            
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+        
+                <div class="video-box">
+                    <div class="home-ad">
+                        <video width="320" height="240" autoplay loop>
+                            <source src="images/Ad-3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="media-container">
+                        <video width="640" height="360" controls>
+                            <source src="images/recycleClothes.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <img src="images/recycleImg.png" alt="Image" class="circular-animation" height="200" width="200">
+                    </div>
+                </div>
+            </section>
+        </article>
+        <p id="wordCount"></p>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                    var totalWordCount = countWords(document.body.innerText);
+                    document.getElementById('wordCount').textContent = 'Total Word count: ' + totalWordCount;
+                });
+        
+                function countWords(text) {
+                    var words = text.trim().split(/\s+/);
+                    return words.length;
+                }
+        </script>
+    </body>
+</html>
