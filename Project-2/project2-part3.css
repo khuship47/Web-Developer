@@ -1,0 +1,157 @@
+
+/* general text formatting */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 3px 0 0 0
+ }
+ h1, h2, h3, nav, footer {
+    font-weight: 500;
+   }
+ 
+ legend {
+    background-color: var(--color-primary-1-900) ;
+    color: var(--color-primary-1-050);
+    margin: 0 auto;
+    width: 90%;
+    padding: 0.25em;
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+ }
+ fieldset {
+    margin: 0.5em auto;
+    background-color: var(--color-neutral-050);
+    border: solid 1px var(--color-neutral-100);
+    width: 90%;
+ }
+ /* all the boxes on the page */
+ div#searchBox, div#settingsBox, div#paintingBox {
+    background-color: var(--color-neutral-100);
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-left: 45px;
+    margin-right: 45px;
+ }
+ /* search and radio button */
+ .prac{
+    padding-top: 10px; 
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border: 0;
+ }
+ /* filter dropdown */
+ .prac-1 {
+    padding: 10px 50px 10px 15px;
+    margin-left: 10px;
+    border: 0;
+ }
+ /* apply dropdown */
+ .prac-2{
+    padding: 10px 15px 10px 15px;
+    border: 0;
+ }
+ /* just radio button */
+ input[type="radio"] {
+    margin-right: 5px; 
+    margin-left: 10px;
+    width: 20px; 
+    height: 20px;
+ }
+ /* check boxex */
+ tbody tr td:first-child {
+    padding-right: 10px;
+ }
+ /* images */
+ tbody tr td:nth-child(2) {
+    padding-right: 20px; 
+ }
+ /* title */
+ td:nth-child(3) {
+    font-style: italic;
+ }
+ /* table box */
+ div#paintingBox { 
+    background-color: var(--color-neutral-100);
+    margin-top: 15px;
+    position: relative;
+ }
+ /* head of the table */
+ table thead{
+    background-color: var(--color-primary-1-100);
+ }
+ caption {
+    background-color: var(--color-primary-1-800);
+    color: var(--color-primary-1-050);
+ }
+ 
+ /* Style for the image in the title */
+ img.title-image {
+    max-width: 100px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+ }
+ /* rows */
+ th, td {
+    text-align: left;
+    border: none;
+ }
+ /* table borders */
+ table {
+    border-collapse: collapse;
+    border: none;
+ }
+ /* paintings heading */
+ p{
+    background-color: var(--color-support-1-800);
+    text-align: center;
+    color: var(--color-primary-1-050);
+    padding: 0.50em;
+    font-size: 20px;
+    margin-right: 0.50em;
+    margin-bottom: 0;
+    margin-top: 5px;
+ }
+ /* all the buttons on the page */
+ .button{
+    background-color:var(--color-primary-1-700);
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+ }
+ /* horizontal line after each rows */
+ tbody tr:nth-child(1),
+ tbody tr:nth-child(2),
+ tbody tr:nth-child(3),
+ tbody tr:nth-child(4) {
+     border-bottom: 1px solid var(--color-neutral-200);
+ }
+ /* spacing after the columns*/
+ td:nth-child(3) {
+    padding-right: 60px;
+ }
+ 
+ td:nth-child(4) {
+    padding-right: 50px;
+ }
+ 
+ td:nth-child(5) {
+    padding-right: 50px;
+ }
+ 
+ td:nth-child(6) {
+    padding-right: 50px;
+ }
+ 
+ .col-5 button {
+    padding: 5px 10px; 
+ }
+ 
+  

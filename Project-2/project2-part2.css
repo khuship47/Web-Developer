@@ -1,0 +1,110 @@
+/* reseting the page to default */
+html, body, header, footer, main, nav, article, section, figure, figcaption, h1, h2, ul, li, body, div, p, img
+{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+}
+/* background image */
+body{
+    background-image: url("images/art-background4.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: 'Merriweather';
+}
+/* 1st box on the website */
+header{
+    background: rgba(33, 33, 33, 0.5);
+    margin-top: 15px;
+    margin-right: 70%;
+    margin-left: 30px;
+    padding: 15px 0px 12px 20px;
+    position: relative;
+    box-shadow: 12px 12px 20px;
+    min-width: 480px;
+}
+/* first line in header box */
+header h1{
+    color: white;
+    font-size: 45px;
+}
+/* second line in header box */
+header h2{
+    color: white;
+    font-size: 10px;
+}
+
+/* second box on the web page */
+main{
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: 70px;
+    margin-right: 70%;
+    margin-left: 30px;
+    position: relative;
+    box-shadow: 12px 12px 20px;
+    min-width: 500px;
+}
+/* heading in the main */
+main h2{
+    background: rgba(224, 224, 224, 0.5);
+    font-size: 20px;
+    margin: 0% 0% 3% 0%;
+    padding: 10px 10px 10px 20px;
+}
+/* content in the red in second box */
+main #footnote, sup{
+    color: red;
+}
+/* 2nd line in the second box */
+#announcement{
+    font-weight: bold;
+    margin-left: 4%;
+    font-size: 14px;
+}
+/* 3rd line in the second box*/
+#timeline{
+    background: rgba(66, 66, 66, 0.5);
+    margin: 2% 43% 4% 0%;
+    padding: 10px 10px 10px 10px;
+    color: white;
+    margin-left: 4%;
+}
+/* spacing around the 4th line in the second box*/
+#footnote{
+    margin-top: 4%;
+    margin-left: 4%;
+    padding-bottom: 3%;
+}
+
+/* third box in the web page with images*/
+footer{
+    background: rgba(33, 33, 33, 0.5);
+    margin-top: 30px;
+    margin-right: 80%;
+    margin-left: 30px;
+    padding: 15px 0px 12px 20px;
+    position: relative;
+    box-shadow: 12px 12px 20px;
+    min-width: 480px;
+    font-size: 14px;
+}
+/* making sure images do not overflow in third box */
+footer div{
+    white-space: nowrap;
+    overflow: auto;
+}
+/* heading in the third box */
+footer h2{
+    color: white;
+}
+/* styling to the images in the third box */
+footer img{
+    border: 1px solid white;
+    padding: 6px 6px 6px 6px;
+    margin: 1% 1% 0% 0%;
+    max-width: 100%;
+}
+
